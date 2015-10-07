@@ -1,0 +1,13 @@
+{
+    "css": [
+        "css/dataTables.jqueryui.css",
+        "css/dataTables.jqueryui.min.css"
+    ],
+    "js": [
+        "js/dataTables.jqueryui.js",
+        "js/dataTables.jqueryui.min.js"
+    ],
+    "src-repo": "http://github.com/DataTables/DataTablesSrc",
+    "last-sync": "07dbb4d0dfaff7a518bb30d671446ea246ca76a3",
+    "last-tag": "1.10.9"
+}
