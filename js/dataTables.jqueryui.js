@@ -13,29 +13,22 @@
 (function( factory ){
 	if ( typeof define === 'function' && define.amd ) {
 		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
+		define( ['jquery', 'datatables.net'], factory );
 	}
 	else if ( typeof exports === 'object' ) {
 		// CommonJS
-		module.exports = function (root, $) {
-			if ( ! root ) {
-				root = window;
-			}
+		module.exports = function ($) {
+			if ( ! $ ) { $ = require('jquery'); }
+			if ( ! $.fn.dataTable ) { require('datatables.net')($); }
 
-			if ( ! $ || ! $.fn.dataTable ) {
-				$ = require('datatables.net')(root, $).$;
-			}
-
-			return factory( $, root, root.document );
+			factory( $ );
 		};
 	}
-	else {
+	else if ( jQuery ) {
 		// Browser
-		factory( jQuery, window, document );
+		factory( jQuery );
 	}
-}(function( $, window, document, undefined ) {
+}(function( $ ) {
 'use strict';
 var DataTable = $.fn.dataTable;
 
