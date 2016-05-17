@@ -6,7 +6,8 @@
         "js/dataTables.jqueryui.js",
         "css/dataTables.jqueryui.css"
     ],
-    "main": "./js/dataTables.jqueryui.js",
+    "main": "js/dataTables.jqueryui.js",
+    "style": "css/dataTables.jqueryui.css",
     "keywords": [
         "filter",
         "sort",
