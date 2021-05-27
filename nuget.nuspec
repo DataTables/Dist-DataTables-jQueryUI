@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>datatables.net-ju</id>
-    <version>1.10.24</version>
-    <description>jqueryUI integration for DataTables</description>
-    <authors>SpryMedia Ltd</authors>
-    <projectUrl>http://datatables.net</projectUrl>
-    <license type="expression">MIT</license>
-    <tags> DataTables jQuery table jqueryUI</tags>
-    <repository type="git" url="https://github.com/DataTables/Dist-DataTables-jqueryUI.git"/>
-    <dependencies>
-      <dependency id="jquery" version="1.7.0"/>
-      <dependency id="datatables.net" version="1.10.23"/>
-      <dependency id="jqueryui" version="1.*"/>
-    </dependencies>
-    <contentFiles>
-      <files include="**/*" buildAction="Content"/>
-    </contentFiles>
-  </metadata>
-  <files>
-    <file src="js/dataTables.jqueryui.js" target="content\Scripts"/>
-    <file src="js/dataTables.jqueryui.min.js" target="content\Scripts"/>
-    <file src="css/dataTables.jqueryui.css" target="content\Content"/>
-    <file src="css/dataTables.jqueryui.min.css" target="content\Content"/>
-    <file src="js/dataTables.jqueryui.js" target="contentFiles\any\any\wwwroot\js"/>
-    <file src="js/dataTables.jqueryui.min.js" target="contentFiles\any\any\wwwroot\js"/>
-    <file src="css/dataTables.jqueryui.css" target="contentFiles\any\any\wwwroot\css"/>
-    <file src="css/dataTables.jqueryui.min.css" target="contentFiles\any\any\wwwroot\css"/>
-  </files>
+    <metadata>
+        <version>1.10.24</version>
+        <id>datatables.net-jqui</id>
+        <description>This is DataTables with styling for [jQueryUI](http://jqueryui.com/)</description>
+        <repository type="git" url="https://github.com/DataTables/Dist-DataTables-jQueryUI.git"/>
+        <authors>SpryMedia Ltd</authors>
+        <projectUrl>http://datatables.net</projectUrl>
+        <license type="expression">MIT</license>
+        <tags>jQuery UI  jQueryUI  Datatables jQuery table</tags>
+        <dependencies>
+            <dependency id="datatables.net" version=">=1.10.24"/>
+            <dependency id="jqueryui" version="1.*"/>
+        </dependencies>
+        <contentFiles>
+            <files include="**/*" buildAction="Content"/>
+        </contentFiles>
+    </metadata>
+    <files>
+        <file src="js/dataTables.jqueryui.js" target="content\Scripts"/>
+        <file src="js/dataTables.jqueryui.js" target="contentFiles\any\any\wwwroot\js"/>
+        <file src="js/dataTables.jqueryui.min.js" target="content\Scripts"/>
+        <file src="js/dataTables.jqueryui.min.js" target="contentFiles\any\any\wwwroot\js"/>
+        <file src="css/dataTables.jqueryui.css" target="content\Content"/>
+        <file src="css/dataTables.jqueryui.css" target="contentFiles\any\any\wwwroot\css"/>
+        <file src="css/dataTables.jqueryui.min.css" target="content\Content"/>
+        <file src="css/dataTables.jqueryui.min.css" target="contentFiles\any\any\wwwroot\css"/>
+        <file src="types/dataTables.jQueryUI.d.ts" target="content\Scripts"/>
+        <file src="types/dataTables.jQueryUI.d.ts" target="contentFiles\any\any\wwwroot\js"/>
+    </files>
 </package>
+
