@@ -3,6 +3,7 @@
     "description": "DataTables for jQuery with styling for [jQueryUI](http://jqueryui.com/)",
     "main": "js/dataTables.jqueryui.js",
     "style": "css/dataTables.jqueryui.css",
+    "types": "./types/dataTables.jQueryUI.d.ts",
     "version": "1.10.24",
     "files": [
         "css/**/*.css",
