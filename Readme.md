@@ -1,5 +1,4 @@
-
-            # DataTables for jQuery with styling for [jQueryUI](http://jqueryui.com/)
+# DataTables for jQuery with styling for [jQueryUI](http://jqueryui.com/)
 
 This package contains distribution files required to style [DataTables library](https://datatables.net) for [jQuery](http://jquery.com/) with styling for [jQueryUI](http://jqueryui.com/).
 
