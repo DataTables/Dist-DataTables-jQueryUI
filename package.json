@@ -4,7 +4,7 @@
     "main": "js/dataTables.jqueryui.js",
     "style": "css/dataTables.jqueryui.css",
     "types": "./types/dataTables.jQueryUI.d.ts",
-    "version": "1.11.2",
+    "version": "1.11.3",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
