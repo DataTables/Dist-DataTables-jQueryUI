@@ -630,7 +630,6 @@ table.dataTable tfoot th.ui-state-default:first-child {
   text-align: center;
   text-decoration: none !important;
   cursor: pointer;
-  *cursor: hand;
   border: 1px solid transparent;
 }
 .dataTables_wrapper .dataTables_paginate .fg-button:active {
