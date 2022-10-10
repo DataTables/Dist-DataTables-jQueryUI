@@ -2,12 +2,14 @@
     "name": "datatables.net-jqui",
     "description": "DataTables for jQuery with styling for [jQueryUI](http://jqueryui.com/)",
     "main": "js/dataTables.jqueryui.js",
+    "module": "js/dataTables.jqueryui.mjs",
     "style": "css/dataTables.jqueryui.css",
     "types": "./types/dataTables.jQueryUI.d.ts",
     "version": "1.12.1",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
+        "js/**/*.mjs",
         "types/**/*.d.ts",
         "images/*"
     ],
