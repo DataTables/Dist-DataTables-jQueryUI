@@ -11,7 +11,7 @@
         <tags>jQuery UI  jQueryUI  Datatables jQuery table</tags>
         <dependencies>
             <dependency id="datatables.net" version="1.12.1"/>
-            <dependency id="jqueryui" version="1.*"/>
+            <dependency id="jquery.ui" version="1.*"/>
         </dependencies>
         <contentFiles>
             <files include="**/*" buildAction="Content"/>
