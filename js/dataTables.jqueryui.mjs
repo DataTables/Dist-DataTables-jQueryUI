@@ -6,7 +6,6 @@ import $ from 'jquery';
 import DataTable from 'datatables.net';
 
 
-
 /**
  * DataTables integration for jQuery UI. This requires jQuery UI and
  * DataTables 1.10 or newer.
