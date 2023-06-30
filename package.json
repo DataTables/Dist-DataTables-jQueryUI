@@ -4,7 +4,7 @@
     "main": "js/dataTables.jqueryui.js",
     "module": "js/dataTables.jqueryui.mjs",
     "style": "css/dataTables.jqueryui.css",
-    "types": "./types/types.d.ts",
+    "types": "./types/dataTables.jqueryui.d.ts",
     "version": "1.13.4",
     "files": [
         "css/**/*.css",
@@ -15,7 +15,7 @@
     ],
     "keywords": [
         "jQuery UI",
-        "jQueryUI",
+ "jQueryUI",
         "Datatables",
         "jQuery",
         "table",
@@ -23,7 +23,7 @@
         "sort"
     ],
     "dependencies": {
-        "datatables.net": ">=1.12.1",
+        "datatables.net": ">=1.13.4",
         "jquery": ">=1.7"
     },
     "moduleType": [
