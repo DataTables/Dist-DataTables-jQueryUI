@@ -43,7 +43,7 @@
 		// Browser
 		factory( jQuery, window, document );
 	}
-}(function( $, window, document, undefined ) {
+}(function( $, window, document ) {
 'use strict';
 var DataTable = $.fn.dataTable;
 
@@ -58,37 +58,48 @@ var DataTable = $.fn.dataTable;
  * for further information.
  */
 
-var toolbar_prefix = 'fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-';
-
-/* Set the defaults for DataTables initialisation */
-$.extend( true, DataTable.defaults, {
-	dom:
-		'<"'+toolbar_prefix+'tl ui-corner-tr"lfr>'+
-		't'+
-		'<"'+toolbar_prefix+'bl ui-corner-br"ip>'
+$.extend( true, DataTable.ext.classes, {
+	container: 'dt-container dt-jqueryui',
+	paging: {
+		active: 'ui-state-disabled',
+		button: 'fg-button ui-button ui-state-default',
+		container: 'dt-paging fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi',
+		disabled: 'ui-state-disabled'
+	},
+	thead: {
+		cell: 'ui-state-default'
+	},
+	tfoot: {
+		cell: 'ui-state-default'
+	}
 } );
 
 
-$.extend( DataTable.ext.classes, {
-	"sWrapper":            "dataTables_wrapper dt-jqueryui",
+DataTable.ext.renderer.layout.jqueryui = function ( settings, container, items ) {
+	var rowHasDt = false;
+	var row = $( '<div/>', {
+			"class": 'dt-layout-row ui-helper-clearfix'
+		} )
+		.appendTo( container );
 
-	/* Full numbers paging buttons */
-	"sPageButton":         "fg-button ui-button ui-state-default",
-	"sPageButtonActive":   "ui-state-disabled",
-	"sPageButtonDisabled": "ui-state-disabled",
+	$.each( items, function (key, val) {
+		var cell = $( '<div/>', {
+				id: val.id || null,
+				"class": 'dt-layout-cell dt-'+key+' '+(val.className || '')
+			} )
+			.append( val.contents )
+			.appendTo( row );
 
-	/* Features */
-	"sPaging": "dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi "+
-		"ui-buttonset-multi paging_", /* Note that the type is postfixed */
-
-	/* Scrolling */
-	"sScrollHead": "dataTables_scrollHead "+"ui-state-default",
-	"sScrollFoot": "dataTables_scrollFoot "+"ui-state-default",
-
-	/* Misc */
-	"sHeaderTH":  "ui-state-default",
-	"sFooterTH":  "ui-state-default"
-} );
+		if ($(val.contents).hasClass('dataTable')) {
+			rowHasDt = true;
+			cell.addClass('table');
+		}
+	} );
+	
+	if (! rowHasDt) {
+		row.addClass('fg-toolbar ui-toolbar ui-widget-header');
+	}
+};
 
 
 return DataTable;
