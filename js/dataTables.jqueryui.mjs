@@ -31,33 +31,11 @@ $.extend( true, DataTable.ext.classes, {
 	tfoot: {
 		cell: 'ui-state-default ui-widget-header'
 	},
-	grid: {
+	layout: {
 		row: 'dt-layout-row ui-helper-clearfix',
-		cell: 'dt-layout-cell'
+		tableCell: 'table',
 	}
 } );
-
-
-DataTable.ext.renderer.layout.jqueryui = function ( settings, container, items ) {
-	var classes = settings.oClasses;
-	var row = $( '<div/>', {
-			"class": classes.grid.row
-		} )
-		.appendTo( container );
-
-	$.each( items, function (key, val) {
-		var cell = $( '<div/>', {
-				id: val.id || null,
-				"class": classes.grid.cell + ' dt-'+key+' '+(val.className || '')
-			} )
-			.append( val.contents )
-			.appendTo( row );
-
-		if ($(val.contents).hasClass('dataTable')) {
-			cell.addClass('table');
-		}
-	} );
-};
 
 // Set the defaults for DataTables initialisation
 $.extend(true, DataTable.defaults, {
