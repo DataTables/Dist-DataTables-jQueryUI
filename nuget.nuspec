@@ -10,7 +10,7 @@
         <license type="expression">MIT</license>
         <tags>jQuery UI  jQueryUI  Datatables jQuery table</tags>
         <dependencies>
-            <dependency id="datatables.net" version="1.12.1"/>
+            <dependency id="datatables.net" version="2.3.2"/>
             <dependency id="jquery.ui" version="1.*"/>
         </dependencies>
         <contentFiles>
@@ -22,6 +22,10 @@
         <file src="js/dataTables.jqueryui.js" target="contentFiles\any\any\wwwroot\js"/>
         <file src="js/dataTables.jqueryui.min.js" target="content\Scripts"/>
         <file src="js/dataTables.jqueryui.min.js" target="contentFiles\any\any\wwwroot\js"/>
+        <file src="js/dataTables.jqueryui.min.mjs" target="content\Scripts"/>
+        <file src="js/dataTables.jqueryui.min.mjs" target="contentFiles\any\any\wwwroot\js"/>
+        <file src="js/dataTables.jqueryui.mjs" target="content\Scripts"/>
+        <file src="js/dataTables.jqueryui.mjs" target="contentFiles\any\any\wwwroot\js"/>
         <file src="css/dataTables.jqueryui.css" target="content\Content"/>
         <file src="css/dataTables.jqueryui.css" target="contentFiles\any\any\wwwroot\css"/>
         <file src="css/dataTables.jqueryui.min.css" target="content\Content"/>
