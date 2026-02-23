@@ -435,10 +435,6 @@ table.dataTable {
    * Body styles
    */
 }
-table.dataTable thead th,
-table.dataTable tfoot th {
-  font-weight: bold;
-}
 table.dataTable > thead > tr > th,
 table.dataTable > thead > tr > td {
   padding: 10px;
@@ -890,9 +886,6 @@ div.dt-container .dt-paging .fg-button:last-child {
 }
 div.dt-container .ui-widget-header {
   font-weight: normal;
-}
-div.dt-container .ui-toolbar {
-  padding: 8px;
 }
 div.dt-container.no-footer .dt-scroll-body {
   border-bottom: none;
