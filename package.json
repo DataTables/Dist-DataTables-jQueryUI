@@ -1,11 +1,11 @@
 {
     "name": "datatables.net-jqui",
-    "description": "DataTables for jQuery with styling for [jQueryUI](http://jqueryui.com/)",
+    "description": "DataTables with styling for [jQueryUI](http://jqueryui.com/)",
     "main": "js/dataTables.jqueryui.js",
     "module": "js/dataTables.jqueryui.mjs",
     "style": "css/dataTables.jqueryui.css",
     "types": "./types/dataTables.jqueryui.d.ts",
-    "version": "2.3.8",
+    "version": "3.0.0-beta.2",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
@@ -16,25 +16,13 @@
         "jQuery UI",
         "jQueryUI",
         "Datatables",
-        "jQuery",
         "table",
         "filter",
         "sort"
     ],
     "dependencies": {
-        "datatables.net": "2.3.8",
-        "jquery": ">=1.7"
+        "datatables.net": "3.0.0-0"
     },
-    "moduleType": [
-        "globals",
-        "amd",
-        "node"
-    ],
-    "ignore": [
-        "composer.json",
-        "datatables.json",
-        "package.json"
-    ],
     "author": {
         "name": "SpryMedia Ltd",
         "url": "http://datatables.net"
@@ -44,6 +32,6 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/DataTables/Dist-DataTables-jQueryUI.git"
+        "url": "git+https://github.com/DataTables/DataTablesSrc.git"
     }
 }

@@ -1,13 +1,8 @@
-/*! DataTables jQuery UI integration
+/*! DataTables jQuery UI integration 3.0.0-beta.2
  * © SpryMedia Ltd - datatables.net/license
  */
 
-import jQuery from 'jquery';
-import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
-
+import DataTable, {Api, Dom, util} from 'datatables.net';
 
 /**
  * DataTables integration for jQuery UI.
@@ -16,31 +11,30 @@ let $ = jQuery;
  * controls using jQuery UI. See https://datatables.net/manual/styling/jqueryui
  * for further information.
  */
-
-$.extend( true, DataTable.ext.classes, {
-	container: 'dt-container dt-jqueryui',
-	paging: {
-		active: 'ui-state-disabled',
-		button: 'fg-button ui-button ui-state-default',
-		container: 'dt-paging fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi',
-		disabled: 'ui-state-disabled'
-	},
-	thead: {
-		cell: 'ui-state-default fg-toolbar ui-toolbar ui-widget-header'
-	},
-	tfoot: {
-		cell: 'ui-state-default ui-widget-header'
-	},
-	layout: {
-		row: 'dt-layout-row ui-helper-clearfix',
-		tableCell: 'table',
-	}
-} );
-
+DataTable.util.object.assignDeep(DataTable.ext.classes, {
+    container: 'dt-container dt-jqueryui',
+    paging: {
+        active: 'ui-state-disabled',
+        button: 'fg-button ui-button ui-state-default',
+        container: 'dt-paging fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi',
+        disabled: 'ui-state-disabled'
+    },
+    thead: {
+        cell: 'ui-state-default fg-toolbar ui-toolbar ui-widget-header'
+    },
+    tfoot: {
+        cell: 'ui-state-default ui-widget-header'
+    },
+    layout: {
+        row: 'dt-layout-row ui-helper-clearfix',
+        tableCell: 'table'
+    }
+});
 // Set the defaults for DataTables initialisation
-$.extend(true, DataTable.defaults, {
-	renderer: 'jqueryui'
+DataTable.util.object.assignDeep(DataTable.defaults, {
+    renderer: 'jqueryui'
 });
 
 
 export default DataTable;
+export { Api, DataTable, Dom, util };
