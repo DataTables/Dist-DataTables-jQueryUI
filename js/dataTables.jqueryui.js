@@ -1,4 +1,4 @@
-/*! DataTables jQuery UI integration 3.0.0-beta.2
+/*! DataTables jQuery UI integration
  * © SpryMedia Ltd - datatables.net/license
  */
 
