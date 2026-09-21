@@ -1,16 +1,15 @@
 {
     "name": "datatables.net-jqui",
     "description": "DataTables with styling for [jQueryUI](http://jqueryui.com/)",
-    "main": "js/dataTables.jqueryui.js",
-    "module": "js/dataTables.jqueryui.mjs",
-    "style": "css/dataTables.jqueryui.css",
+    "main": "./js/dataTables.jqueryui.js",
+    "module": "./js/dataTables.jqueryui.mjs",
+    "style": "./css/dataTables.jqueryui.css",
     "types": "./types/dataTables.jqueryui.d.ts",
     "version": "3.0.4",
     "files": [
-        "css/**/*.css",
-        "js/**/*.js",
-        "js/**/*.mjs",
-        "types/**/*.d.ts"
+        "js",
+        "css",
+        "types"
     ],
     "keywords": [
         "jQuery UI",
@@ -33,5 +32,24 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DataTables/DataTablesSrc.git"
-    }
+    },
+    "exports": {
+        ".": {
+            "types": "./types/dataTables.jqueryui.d.ts",
+            "import": "./js/dataTables.jqueryui.mjs",
+            "default": "./js/dataTables.jqueryui.mjs",
+            "require": "./js/dataTables.jqueryui.js"
+        },
+        "./js/*": "./js/*",
+        "./css": {
+            "types": "./types/css.d.ts",
+            "default": "./css/dataTables.jqueryui.css"
+        },
+        "./css/*": {
+            "types": "./types/css.d.ts",
+            "default": "./css/*"
+        },
+        "./package.json": "./package.json"
+    },
+    "sideEffects": true
 }
