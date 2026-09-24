@@ -36,9 +36,10 @@
     "exports": {
         ".": {
             "types": "./types/dataTables.jqueryui.d.ts",
+            "style": "./css/dataTables.jqueryui.css",
             "import": "./js/dataTables.jqueryui.mjs",
-            "default": "./js/dataTables.jqueryui.mjs",
-            "require": "./js/dataTables.jqueryui.js"
+            "require": "./js/dataTables.jqueryui.js",
+            "default": "./js/dataTables.jqueryui.mjs"
         },
         "./js/*": "./js/*",
         "./css": {
